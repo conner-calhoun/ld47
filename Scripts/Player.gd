@@ -4,6 +4,7 @@ const TORQUE = 100
 const JUMP_MOD = 150
 const MAX_JUMP = 6
 const JUMP_TICK = .1
+const AIR_CONTROL = 2
 
 export var debug = false
 
@@ -17,8 +18,12 @@ onready var jumpbar = get_parent().get_node("JumpBar")
 func handle_spin():
 	if Input.is_action_pressed("left"):
 		apply_torque_impulse(-TORQUE)
+		if not on_ground:
+			apply_central_impulse(Vector2(-AIR_CONTROL, 0))
 	elif Input.is_action_pressed("right"):
 		apply_torque_impulse(TORQUE)
+		if not on_ground:
+			apply_central_impulse(Vector2(AIR_CONTROL, 0))
 	
 func handle_jump():
 	jumpbar.position = position + Vector2(0, -2)
