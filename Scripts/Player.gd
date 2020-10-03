@@ -60,6 +60,7 @@ func handle_cheats():
 		angular_velocity = 0
 		linear_velocity = Vector2.ZERO
 		position = get_viewport().get_mouse_position()
+		
 
 func _physics_process(delta):
 	handle_spin()
