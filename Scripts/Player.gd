@@ -4,7 +4,7 @@ const TORQUE = 100
 const JUMP_MOD = 150
 const MAX_JUMP = 6
 const JUMP_TICK = .25
-const AIR_CONTROL = 5
+const AIR_CONTROL = 3
 
 export var debug = false
 

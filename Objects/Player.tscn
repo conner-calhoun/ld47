@@ -30,11 +30,6 @@ animations = [ {
 "name": "50",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "100",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "75",
@@ -44,6 +39,11 @@ animations = [ {
 "loop": true,
 "name": "25",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "100",
+"speed": 5.0
 } ]
 
 [node name="Player" type="Node2D"]
@@ -52,6 +52,7 @@ __meta__ = {
 }
 
 [node name="Player" type="RigidBody2D" parent="."]
+rotation = -1.32296
 mass = 5.0
 physics_material_override = SubResource( 1 )
 contacts_reported = 1
@@ -105,6 +106,7 @@ node_b = NodePath("../..")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+process_mode = 0
 
 [node name="JumpBar" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )

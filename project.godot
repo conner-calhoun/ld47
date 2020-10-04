@@ -16,8 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="I Grow Tire'd of This"
-run/main_scene="res://Scenes/TestingHall.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+Music="*res://Scenes/Music.tscn"
 
 [display]
 
@@ -79,5 +84,5 @@ cheat_place={
 
 quality/driver/driver_name="GLES2"
 quality/2d/use_pixel_snap=true
-environment/default_clear_color=Color( 0.0941176, 0.0862745, 0.121569, 1 )
+environment/default_clear_color=Color( 0.721569, 0.976471, 0.952941, 1 )
 environment/default_environment="res://default_env.tres"
