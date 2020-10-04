@@ -79,5 +79,5 @@ cheat_place={
 
 quality/driver/driver_name="GLES2"
 quality/2d/use_pixel_snap=true
-environment/default_clear_color=Color( 0.639216, 0.992157, 1, 1 )
+environment/default_clear_color=Color( 0.0941176, 0.0862745, 0.121569, 1 )
 environment/default_environment="res://default_env.tres"

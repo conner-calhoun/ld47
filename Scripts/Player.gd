@@ -3,8 +3,8 @@ extends RigidBody2D
 const TORQUE = 100
 const JUMP_MOD = 150
 const MAX_JUMP = 6
-const JUMP_TICK = .1
-const AIR_CONTROL = 2
+const JUMP_TICK = .25
+const AIR_CONTROL = 5
 
 export var debug = false
 
@@ -17,12 +17,14 @@ onready var jumpbar = get_parent().get_node("JumpBar")
 
 func handle_spin():
 	if Input.is_action_pressed("left"):
-		apply_torque_impulse(-TORQUE)
-		if not on_ground:
+		if on_ground:
+			apply_torque_impulse(-TORQUE)
+		else:
 			apply_central_impulse(Vector2(-AIR_CONTROL, 0))
 	elif Input.is_action_pressed("right"):
-		apply_torque_impulse(TORQUE)
-		if not on_ground:
+		if on_ground:
+			apply_torque_impulse(TORQUE)
+		else:
 			apply_central_impulse(Vector2(AIR_CONTROL, 0))
 	
 func handle_jump():
